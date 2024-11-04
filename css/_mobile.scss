@@ -1,0 +1,55 @@
+body {
+    background-color: black;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    h1{
+        margin: 0;
+    }
+}
+
+$debugging: true;
+
+.page-title {
+    @if $debugging {
+        outline: 1px solid red;
+    }
+    font-family: "Jockey One", sans-serif;
+    text-transform: uppercase;
+    position: relativ;
+    min-width: 300px;
+    min-height: 300px;
+    
+   div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   }
+    
+   .drizzle, .chickpeas {
+    position: absolute;
+   }
+   
+   .drizzle{
+        color: #ac77ff;
+        top: -12px;
+        right: 0;
+        font-size: 1.57rem;
+    }
+    .tahini {
+        color: #5fff37;
+        font-size: 4rem;
+    }
+    .chickpeas {
+        color: #f9f135;
+        left: 0;
+        bottom: -8px;
+        font-size: 1.75rem;
+        z-index: -1;
+    }
+}
