@@ -125,25 +125,32 @@ ul {
         gap: 16px;
     }
    
+    
     .page-1 {
+    
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    gap: 16px
+    padding-top: 60px;
+    
+    
+    .tahini {
 
-    $debugging: true;
-    .top,
-    .bottom {
-        height: 100vh;
-        
-    }
-    .page-title {
-    @if $debugging {
-        outline: 2px solid red;
-    }
+    outline: 2px solid red;
+
+    grid-column: span 4;
     font-family: "Jockey One", sans-serif;
     text-transform: uppercase;
     position: relative;
     min-width: 300px;
     min-height: 300px;
+    align-items: center;
    
-    div {
+    div  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     position: absolute;
     top: 50%;
     left: 50%;
