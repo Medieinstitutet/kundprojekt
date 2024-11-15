@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: rgb(111, 154, 207);
+    background-color: black;
 }
 
 header{
@@ -116,72 +116,78 @@ ul {
     }
 }
 
-    .page-1,
-    .page-2 {
-        border-left: 16px solid #f9f135;
-        border-right: 16px solid #f9f135;
-        display: grid;
-        grid-template-columns: repeat(11, 1fr);
-        gap: 16px;
-    }
-   
+   .page-1 {
     
-    .page-1 {
-    
+    border-left: 16px solid #f9f135;
+    border-right: 16px solid #f9f135;
+    color: #fff;
     display: grid;
-    grid-template-columns: repeat(11, 1fr);
-    gap: 16px
+    grid-template-columns: 1fr;
+    gap: 16px;
     padding-top: 60px;
-    
-    
-    .tahini {
-
-    outline: 2px solid red;
-
-    grid-column: span 4;
-    font-family: "Jockey One", sans-serif;
-    text-transform: uppercase;
-    position: relative;
-    min-width: 300px;
-    min-height: 300px;
+    justify-items: center;
     align-items: center;
-   
-    div  {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-   }
+    text-align: center;
     
-   .drizzle, 
-   .chickpeas {
-    position: absolute;
+        .logo {
+        
+        border: 2px dashed red;
+        position: relative; /* Behåller referenspunkten för absolut positionerade element */
+        min-width: 200px;
+        min-height: 200px;
+        margin: 0 auto;
+        font-family: "Jockey One", sans-serif;
+        text-transform: uppercase;
+    }
+ 
+   .logo span {
+        position: absolute; //elementen kan placeras fritt
    }
    
    .drizzle{
         color: #ac77ff;
-        top: -12px;
-        right: 0;
         font-size: 1.57rem;
-    }
+        top: 50px; /* Justera placeringen för att överlappa TAHINI */
+        right: 23px;
+   }
     .tahini {
         color: #5fff37;
         font-size: 4rem;
+        top: 50%; /* Centrera i föräldern */
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centrera horisontellt och vertikalt*/
     }
-    .chickpeas {
+        .chickpeas {
         color: #f9f135;
-        left: 0;
-        bottom: -8px;
-        font-size: 1.75rem;
-        z-index: -1;
+        font-size: 1.57rem;
+        bottom: 55px; /* Justera placeringen för att överlappa TAHINI */
+        left: 10px;
+        //z-index: -1;
+        }
+    
+        .text  {
+            max-width: 600px;
+        }
+
+        .image {
+            margin-top: 16px;
+        }
+        
+        .blooper,
+        .blooper-2 {
+            margin-top: 16px;
         }
     }
-}        
-
+    
+    
+  
+    .page-2 {
+    border-left: 16px solid #f9f135;
+    border-right: 16px solid #f9f135;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    gap: 16px;
+}
     .page-2 {
         .image-1{
             grid-column: 1 / span 3;
@@ -243,37 +249,3 @@ ul {
         }
     }
 
-/*
-.page-1
-.top,
-    .bottom {
-        display: grid;
-        gap: 16px;
-        grid-template-columns: repeat(11, 1fr);
-    }
-    
-    .top {
-        
-        .text {
-            grid-column: span 7;
-        }
-    }
-
-    .bottom {
-        .image {
-            grid-column: span 5;
-        }
-
-        .text {
-            grid-column: span 6;
-        }
-    }
-    
-    .page-2 {
-        .top,
-        .bottom {
-        display: grid;
-        gap: 16px;
-        grid-template-columns: repeat(11, 1fr);
-    }
-    } */
